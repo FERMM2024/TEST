@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# UnitTest
-=======
 # Personal Portfolio
 
 This is a personal portfolio website that showcases my skills, projects, and professional experience. The website is built using React and includes various components to display different sections of the portfolio.
@@ -43,7 +40,7 @@ personal-portfolio
    ```
 2. Navigate to the project directory:
    ```
-   cd personal-portfolio
+   cd TEST
    ```
 3. Install the dependencies:
    ```
@@ -53,6 +50,39 @@ personal-portfolio
    ```
    npm start
    ```
+
+## Abrir en VS Code
+
+Para facilitar el desarrollo, recomendamos abrir el proyecto en Visual Studio Code:
+
+1. **Instalar VS Code**: Si aún no lo tienes, descarga e instala Visual Studio Code desde [https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+2. **Abrir el proyecto**:
+   - **Opción 1 - Desde VS Code**:
+     - Abre VS Code
+     - Selecciona "File" > "Open Folder" (o "Archivo" > "Abrir carpeta")
+     - Navega y selecciona la carpeta raíz del repositorio (la carpeta "TEST" que contiene este README.md)
+     - Haz clic en "Abrir"
+   
+   - **Opción 2 - Desde la línea de comandos**:
+     - Abre una terminal/consola
+     - Navega hasta la carpeta del proyecto
+     - Ejecuta: `code .` (esto abrirá VS Code en la carpeta actual)
+
+3. **Extensiones recomendadas** (opcional):
+   - **ES7+ React/Redux/React-Native snippets**: Para acelerar el desarrollo con React
+   - **Auto Rename Tag**: Para renombrar automáticamente las etiquetas HTML/JSX
+   - **Prettier**: Para formatear el código automáticamente
+   - **ESLint**: Para detectar errores de código
+
+4. **Terminal integrado**:
+   - Una vez abierto el proyecto, puedes usar el terminal integrado de VS Code (Ctrl+`) para ejecutar los comandos npm:
+     ```
+     npm install
+     npm start
+     ```
+
+Al abrir la carpeta raíz en VS Code, tendrás acceso a todos los archivos del proyecto, IntelliSense para JavaScript/React, y podrás aprovechar todas las funcionalidades del editor para un desarrollo más eficiente.
 
 ## Technologies Used
 
@@ -67,4 +97,3 @@ personal-portfolio
 [Your LinkedIn Profile or Website]  
 
 Feel free to explore the code and customize it to fit your personal style and preferences!
->>>>>>> e443855ddc4ce07d363c0d43c20c2d741518be37
