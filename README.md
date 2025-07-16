@@ -14,8 +14,9 @@ npm test
 
 The tests verify that personal information is present and that there are at
 least five skills and three projects. GitHub Copilot suggested the basic
-structure of these assertions which were then adapted to the built in `node:test`
-module.
+structure of these assertions which were then adapted to the built in
+`node:test` module. Copilot also helped generate the Materialize based markup
+used on the page.
 
 ## GitHub Actions
 

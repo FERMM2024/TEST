@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
 </head>
-<body>
-  <div id="portfolio"></div>
+<body class="container">
+  <div id="portfolio" class="card"></div>
   <script src="portfolio.js"></script>
   <script>
     const p = typeof portfolio !== 'undefined' ? portfolio : {};
     document.getElementById('portfolio').innerHTML = `
-      <img src="${p.personal.photo}" alt="foto" />
-      <h1>${p.personal.name}</h1>
-      <p>${p.personal.phone}</p>
-      <h2>Skills</h2>
-      <ul>${p.skills.map(s => `<li>${s}</li>`).join('')}</ul>
-      <h2>Projects</h2>
-      <ul>${p.projects.map(pr => `<li>${pr.name}</li>`).join('')}</ul>
+      <div class="card-image center-align">
+        <img src="${p.personal.photo}" alt="foto" class="circle responsive-img" style="width:150px">
+        <span class="card-title">${p.personal.name}</span>
+      </div>
+      <div class="card-content">
+        <p class="grey-text text-darken-2">Tel: ${p.personal.phone}</p>
+        <h5>Skills</h5>
+        <ul class="collection">${p.skills.map(s => `<li class="collection-item">${s}</li>`).join('')}</ul>
+        <h5>Projects</h5>
+        <ul class="collection">${p.projects.map(pr => `<li class="collection-item">${pr.name}</li>`).join('')}</ul>
+      </div>
     `;
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
