@@ -1,8 +1,6 @@
 # Personal Portfolio CI Example
 
-This repository contains a very small portfolio web page along with a workflow
-that runs unit tests and deploys the site to **GitHub Pages**. All portfolio data
-is stored in `portfolio.js` so the page and the tests share the same source.
+This repository contains a very small portfolio web page along with a workflow that runs unit tests and deploys the site to **GitHub Pages**. All portfolio data is stored in `portfolio.js`, so the page and the tests share the same source.
 
 ## Running tests locally
 
