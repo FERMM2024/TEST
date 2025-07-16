@@ -1,70 +1,24 @@
-<<<<<<< HEAD
-# UnitTest
-=======
-# Personal Portfolio
+# Personal Portfolio CI Example
 
-This is a personal portfolio website that showcases my skills, projects, and professional experience. The website is built using React and includes various components to display different sections of the portfolio.
+This repository contains a very small portfolio web page along with a workflow
+that runs unit tests and deploys the site to **GitHub Pages**. All portfolio data
+is stored in `portfolio.js` so the page and the tests share the same source.
 
-## Project Structure
+## Running tests locally
 
-The project is organized as follows:
+The project uses Node's built in test runner. Execute:
 
-```
-personal-portfolio
-├── public
-│   └── index.html          # Main HTML document
-├── src
-│   ├── assets
-│   │   └── profile-photo.jpg # Profile photograph
-│   ├── components
-│   │   ├── AboutMe.jsx      # Component for personal information
-│   │   ├── Experience.jsx    # Component for professional experience
-│   │   ├── Languages.jsx     # Component for programming languages
-│   │   ├── Projects.jsx      # Component for academic/professional projects
-│   │   └── Skills.jsx        # Component for skills
-│   ├── App.jsx               # Main application component
-│   └── styles
-│       └── main.css         # CSS styles for the website
-├── package.json              # npm configuration file
-└── README.md                 # Project documentation
+```bash
+npm test
 ```
 
-## Features
+The tests verify that personal information is present and that there are at
+least five skills and three projects. GitHub Copilot suggested the basic
+structure of these assertions which were then adapted to the built in
+`node:test` module. Copilot also helped generate the Materialize based markup
+used on the page.
 
-- **Responsive Design**: The portfolio is designed to be responsive and accessible on various devices.
-- **Dynamic Components**: Each section of the portfolio is modularized into components for better maintainability.
-- **Profile Photo**: A personal touch with a profile photograph included in the About Me section.
+## GitHub Actions
 
-## Setup Instructions
-
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```
-   cd personal-portfolio
-   ```
-3. Install the dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm start
-   ```
-
-## Technologies Used
-
-- React
-- CSS
-- JavaScript
-
-## Author
-
-[Your Name]  
-[Your Contact Information]  
-[Your LinkedIn Profile or Website]  
-
-Feel free to explore the code and customize it to fit your personal style and preferences!
->>>>>>> e443855ddc4ce07d363c0d43c20c2d741518be37
+The workflow in `.github/workflows/ci.yml` installs Node, runs the tests, and
+publishes the root directory to GitHub Pages on every push.
