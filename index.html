@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+</head>
+<body>
+  <div id="portfolio"></div>
+  <script src="portfolio.js"></script>
+  <script>
+    const p = typeof portfolio !== 'undefined' ? portfolio : {};
+    document.getElementById('portfolio').innerHTML = `
+      <img src="${p.personal.photo}" alt="foto" />
+      <h1>${p.personal.name}</h1>
+      <p>${p.personal.phone}</p>
+      <h2>Skills</h2>
+      <ul>${p.skills.map(s => `<li>${s}</li>`).join('')}</ul>
+      <h2>Projects</h2>
+      <ul>${p.projects.map(pr => `<li>${pr.name}</li>`).join('')}</ul>
+    `;
+  </script>
+</body>
+</html>

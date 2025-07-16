@@ -1,70 +1,19 @@
-<<<<<<< HEAD
-# UnitTest
-=======
-# Personal Portfolio
+# Personal Portfolio CI Example
 
-This is a personal portfolio website that showcases my skills, projects, and professional experience. The website is built using React and includes various components to display different sections of the portfolio.
+This repository demonstrates a simple portfolio with automated tests and a GitHub Actions pipeline that deploys the static page to **GitHub Pages**. The portfolio data is defined in `portfolio.js` and reused both for the tests and for rendering the HTML.
 
-## Project Structure
+## Running tests locally
 
-The project is organized as follows:
-
-```
-personal-portfolio
-├── public
-│   └── index.html          # Main HTML document
-├── src
-│   ├── assets
-│   │   └── profile-photo.jpg # Profile photograph
-│   ├── components
-│   │   ├── AboutMe.jsx      # Component for personal information
-│   │   ├── Experience.jsx    # Component for professional experience
-│   │   ├── Languages.jsx     # Component for programming languages
-│   │   ├── Projects.jsx      # Component for academic/professional projects
-│   │   └── Skills.jsx        # Component for skills
-│   ├── App.jsx               # Main application component
-│   └── styles
-│       └── main.css         # CSS styles for the website
-├── package.json              # npm configuration file
-└── README.md                 # Project documentation
+```bash
+node test.js
 ```
 
-## Features
+The tests validate that personal information, skills, and projects meet the required counts. They were generated with help from GitHub Copilot which suggested the basic `assert` structure.
 
-- **Responsive Design**: The portfolio is designed to be responsive and accessible on various devices.
-- **Dynamic Components**: Each section of the portfolio is modularized into components for better maintainability.
-- **Profile Photo**: A personal touch with a profile photograph included in the About Me section.
+## GitHub Actions
 
-## Setup Instructions
+The workflow defined in `.github/workflows/ci.yml` installs nothing, runs the tests using Node, and publishes the repository to GitHub Pages on every push.
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```
-   cd personal-portfolio
-   ```
-3. Install the dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm start
-   ```
+## Notes on AI assistance
 
-## Technologies Used
-
-- React
-- CSS
-- JavaScript
-
-## Author
-
-[Your Name]  
-[Your Contact Information]  
-[Your LinkedIn Profile or Website]  
-
-Feel free to explore the code and customize it to fit your personal style and preferences!
->>>>>>> e443855ddc4ce07d363c0d43c20c2d741518be37
+Copilot helped draft the test cases and the workflow file. The suggestions were adapted to this simplified setup without external packages.
