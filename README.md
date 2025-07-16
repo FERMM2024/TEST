@@ -1,19 +1,23 @@
 # Personal Portfolio CI Example
 
-This repository demonstrates a simple portfolio with automated tests and a GitHub Actions pipeline that deploys the static page to **GitHub Pages**. The portfolio data is defined in `portfolio.js` and reused both for the tests and for rendering the HTML.
+This repository contains a very small portfolio web page along with a workflow
+that runs unit tests and deploys the site to **GitHub Pages**. All portfolio data
+is stored in `portfolio.js` so the page and the tests share the same source.
 
 ## Running tests locally
 
+The project uses Node's built in test runner. Execute:
+
 ```bash
-node test.js
+npm test
 ```
 
-The tests validate that personal information, skills, and projects meet the required counts. They were generated with help from GitHub Copilot which suggested the basic `assert` structure.
+The tests verify that personal information is present and that there are at
+least five skills and three projects. GitHub Copilot suggested the basic
+structure of these assertions which were then adapted to the built in `node:test`
+module.
 
 ## GitHub Actions
 
-The workflow defined in `.github/workflows/ci.yml` installs nothing, runs the tests using Node, and publishes the repository to GitHub Pages on every push.
-
-## Notes on AI assistance
-
-Copilot helped draft the test cases and the workflow file. The suggestions were adapted to this simplified setup without external packages.
+The workflow in `.github/workflows/ci.yml` installs Node, runs the tests, and
+publishes the root directory to GitHub Pages on every push.
