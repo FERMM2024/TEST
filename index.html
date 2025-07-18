@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="container">
+  <nav class="blue-grey darken-4">
+    <div class="nav-wrapper">
+      <span class="brand-logo center">Portfolio</span>
+    </div>
+  </nav>
+  <div id="portfolio" class="card"></div>
+  <script src="src/portfolio.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const p = typeof portfolio !== 'undefined' ? portfolio : {};
+      document.getElementById('portfolio').innerHTML = `
+        <div class="card-image center-align">
+          <img src="${p.personal.photo}" alt="foto" class="circle responsive-img" style="width:150px">
+          <span class="card-title">${p.personal.name}</span>
+        </div>
+        <div class="card-content">
+          <p class="grey-text text-darken-2">Tel: ${p.personal.phone}</p>
+          <h5>Skills</h5>
+          <ul class="collection">${p.skills.map(s => `<li class="collection-item">${s}</li>`).join('')}</ul>
+          <h5>Projects</h5>
+          <ul class="collection">${p.projects.map(pr => `<li class="collection-item">${pr.name}</li>`).join('')}</ul>
+        </div>
+      `;
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
+
