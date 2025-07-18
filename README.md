@@ -1,28 +1,23 @@
 # Personal Portfolio CI Example
 
-This repository contains a very small portfolio web page along with a workflow that runs unit tests and deploys the site to **GitHub Pages**. All portfolio data is stored in `src/portfolio.js`, so the page and the tests share the same source. The photo is embedded as a small base64 image to satisfy the photograph requirement.
+This repository contains a small portfolio web page. A GitHub Actions workflow installs dependencies, runs tests and deploys the site to **GitHub Pages** on every push.
 
-The data lives in `src/portfolio.js` and tests reside in the `tests` directory.
+## Project structure
+
+- `src/portfolio.js` – reusable object with personal data
+- `tests/` – Node tests validating the data
+- `index.html` – loads the portfolio object and shows it with Materialize styles
 
 ## Running tests locally
 
-
-The project uses Node's built in test runner. Execute:
-
-```bash
+```
 npm test
 ```
 
-The tests verify that personal information is present and that there are at least five skills and three projects. GitHub Copilot suggested the basic structure of these assertions which were then adapted to the built in `node:test` module. Copilot also helped generate the Materialize based markup used on the page.
+The tests check that a base64 photo, phone number and name are present and that there are at least five skills and three projects. GitHub Copilot helped sketch the initial assertions and the workflow file.
 
 ## GitHub Actions
 
-The workflow in `.github/workflows/ci.yml` installs Node, runs the tests, and
-publishes the root directory to GitHub Pages on every push.
-GitHub Copilot also provided the initial template for the workflow file.
+The workflow defined in `.github/workflows/ci.yml` uses Node 20, runs `npm ci` and `npm test`, then deploys the repository root to the `gh-pages` branch. The image is embedded as base64 text so no binary files are stored in the repo.
 
-To keep the repository lightweight, all binary artifacts were removed. The portfolio photo is stored as a base64 string in `src/portfolio.js`.
-
-
-The site is automatically deployed to GitHub Pages at [https://yourusername.github.io/personal-portfolio](https://yourusername.github.io/personal-portfolio).
-
+The site will be published automatically at the GitHub Pages URL configured for the repository.
