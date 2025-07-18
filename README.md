@@ -19,3 +19,6 @@ publishes the root directory to GitHub Pages on every push.
 
 To keep the repository lightweight, all binary artifacts were removed. The portfolio photo is stored as a base64 string in `portfolio.js`.
 
+
+The site is automatically deployed to GitHub Pages at [https://yourusername.github.io/personal-portfolio](https://yourusername.github.io/personal-portfolio).
+
