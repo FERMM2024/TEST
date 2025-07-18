@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const portfolio = require('./portfolio');
+const portfolio = require('../src/portfolio');
 
 test('personal info includes photo file, phone, and name', () => {
   assert.ok(/^data:image\/png;base64,/.test(portfolio.personal.photo));

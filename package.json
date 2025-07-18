@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple static portfolio with tests and CI",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test tests"
   },
   "homepage": "https://yourusername.github.io/personal-portfolio"
 }

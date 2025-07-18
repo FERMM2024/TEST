@@ -1,8 +1,11 @@
 # Personal Portfolio CI Example
 
-This repository contains a very small portfolio web page along with a workflow that runs unit tests and deploys the site to **GitHub Pages**. All portfolio data is stored in `portfolio.js`, so the page and the tests share the same source. The photo is embedded as a small base64 image to satisfy the photograph requirement.
+This repository contains a very small portfolio web page along with a workflow that runs unit tests and deploys the site to **GitHub Pages**. All portfolio data is stored in `src/portfolio.js`, so the page and the tests share the same source. The photo is embedded as a small base64 image to satisfy the photograph requirement.
+
+The data lives in `src/portfolio.js` and tests reside in the `tests` directory.
 
 ## Running tests locally
+
 
 The project uses Node's built in test runner. Execute:
 
@@ -16,8 +19,9 @@ The tests verify that personal information is present and that there are at leas
 
 The workflow in `.github/workflows/ci.yml` installs Node, runs the tests, and
 publishes the root directory to GitHub Pages on every push.
+GitHub Copilot also provided the initial template for the workflow file.
 
-To keep the repository lightweight, all binary artifacts were removed. The portfolio photo is stored as a base64 string in `portfolio.js`.
+To keep the repository lightweight, all binary artifacts were removed. The portfolio photo is stored as a base64 string in `src/portfolio.js`.
 
 
 The site is automatically deployed to GitHub Pages at [https://yourusername.github.io/personal-portfolio](https://yourusername.github.io/personal-portfolio).
